@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+}
+
+body {
+  background-color: #202124;
+
+  font: 13px arial, sans-serif;
+
+  margin: 0 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper {
+  flex-grow: 1;
+}
+
+/* *Nav Items */
+
+ul {
+  line-height: 0px;
+  padding: 0px;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 10px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* * Links  */
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #fefefe;
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+/* ?Styling the sign in button */
+
+.signin {
+  background-color: rgb(5, 135, 195);
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 3px;
+  transition: background-color 0.5s;
+}
+
+.signin:hover {
+  text-decoration: none !important;
+  background-color: rgb(5, 100, 195);
+}
+
+/* !IMAGE */
+
+.image {
+  height: 100px;
+}
+
+/* !Search Bar */
+
+section {
+  margin-top: 80px;
+}
+
+.search {
+  width: 450px;
+  height: 35px;
+  border-radius: 100px;
+  background-color: #202124;
+  border: 2px solid #303134;
+  color: white;
+  padding: 0 15px;
+  transition: background-color 0.5s;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.search:hover {
+  background-color: #303134;
+}
+
+/* !BUTTONS */
+.google,
+.lucky {
+  /* padding: 10px 25px; */
+  border: 0;
+  border-radius: 0;
+  background-color: #303134;
+  color: white;
+  transition: all 0.5s;
+}
+
+.google:hover,
+.lucky:hover {
+  /* Trick to add border inside */
+  box-shadow: inset 0 0 0 2px #64676d;
+  background-color: #212121;
+  cursor: pointer;
+}
+
+/*  */
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.google,
+.lucky {
+  width: 180px;
+  height: 40px;
+}
+/* !FOOTER */
+
+.wrapper {
+  flex-grow: 1;
+}
+
+footer {
+  font-size: 15px;
+  border-top: 2px solid rgb(86, 86, 86);
+  margin: 0 0;
+  width: 100%;
+  background-color: #171717;
+}
+
+footer .ftr1 a,
+footer .ftr2 a {
+  color: #a7adb9;
+  margin-right: 30px;
+}
+
+.footer {
+  padding: 25px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .ftr1 a:first-child {
+  margin-left: 15px;
+}
+
+/* !Toggle Button */
+
+.toggle-switch {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  --light: #d8dbe0;
+  --dark: #28292c;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+}
+
+.switch-label {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: var(--dark);
+  border-radius: 25px;
+  cursor: pointer;
+  border: 3px solid var(--dark);
+}
+
+.checkbox {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
+  box-shadow: inset 12px -4px 0px 0px var(--light);
+  background-color: var(--dark);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider::before {
+  -webkit-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  transform: translateX(50px);
+  background-color: var(--dark);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* !=====================LIGHT MODE========================== */
+
+body.light {
+  background-color: white;
+}
+
+.nav-links.light a,
+.nav-links.light a:link,
+.nav-links.light a:visited {
+  color: #1b1b1b;
+}
+
+.signin.light {
+  background-color: #00a2ed;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 3px;
+  transition: background-color 0.5s;
+  color: white !important;
+}
+
+.signin.light:hover {
+  background-color: #0086e0;
+}
+
+footer.light {
+  background-color: #f2f2f2;
+  border-top: 2px solid rgb(111, 111, 111);
+}
+
+footer.light .ftr1 a,
+footer.light .ftr2 a {
+  color: #333333;
+}
+
+.search.light {
+  background-color: #ffffff;
+  border: 2px solid #b3b3b3;
+  color: rgb(0, 0, 0);
+}
+
+.google.light,
+.lucky.light {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.google.light:hover,
+.lucky.light:hover {
+  box-shadow: inset 0 0 0 2px #959595;
+  background-color: #ffffff;
+}
