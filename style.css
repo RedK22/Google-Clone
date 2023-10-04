@@ -285,7 +285,8 @@ footer.light .ftr2 a {
 
 .google.light,
 .lucky.light {
-  background-color: #ffffff;
+  background-color: #efefef;
+
   color: rgb(0, 0, 0);
 }
 
@@ -293,4 +294,48 @@ footer.light .ftr2 a {
 .lucky.light:hover {
   box-shadow: inset 0 0 0 2px #959595;
   background-color: #ffffff;
+}
+
+/** MediaQueries */
+@media screen and (max-width: 700px) {
+  footer .footer {
+    display: block;
+  }
+
+  footer .ftr1,
+  footer .ftr2 {
+    text-align: center;
+    margin-bottom: 10px; /* Add some margin between links */
+  }
+}
+
+@media screen and (max-width: 450px) {
+  footer .ftr1 {
+    display: none;
+  }
+
+  .search {
+    width: 300px;
+  }
+
+  .google,
+  .lucky {
+    width: 140px;
+    height: 30px;
+  }
+
+  section {
+    margin-top: 180px; /* Adjust the value as needed */
+  }
+
+  .image {
+    margin-top: 20px;
+    height: 80px; /* Adjust the height as needed */
+  }
+
+  nav .nav-links a {
+    font-size: 15px; /* Adjust the font size as needed */
+  }
+
+  /* test */
 }
