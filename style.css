@@ -181,6 +181,7 @@ footer .ftr1 a:first-child {
 /* !Toggle Button */
 
 .toggle-switch {
+  transform: scale(0.5);
   position: relative;
   width: 100px;
   height: 50px;
